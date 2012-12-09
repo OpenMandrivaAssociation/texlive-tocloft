@@ -50,3 +50,16 @@ new `List of ...'. The ToC \parskip can be changed.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.3e-2
++ Revision: 757001
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.3e-1
++ Revision: 719772
+- texlive-tocloft
+- texlive-tocloft
+- texlive-tocloft
+
