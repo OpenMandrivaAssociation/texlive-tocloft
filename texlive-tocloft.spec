@@ -1,12 +1,12 @@
-# revision 20084
+# revision 30209
 # category Package
 # catalog-ctan /macros/latex/contrib/tocloft
-# catalog-date 2010-10-13 11:41:41 +0200
+# catalog-date 2013-05-02 18:21:19 +0200
 # catalog-license lppl1.3
-# catalog-version 2.3e
+# catalog-version 2.3f
 Name:		texlive-tocloft
-Version:	2.3e
-Release:	2
+Version:	2.3f
+Release:	1
 Summary:	Control table of contents, figures, etc
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tocloft
@@ -50,16 +50,3 @@ new `List of ...'. The ToC \parskip can be changed.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.3e-2
-+ Revision: 757001
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.3e-1
-+ Revision: 719772
-- texlive-tocloft
-- texlive-tocloft
-- texlive-tocloft
-
