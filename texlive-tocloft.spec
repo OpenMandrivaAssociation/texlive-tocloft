@@ -6,7 +6,7 @@
 # catalog-version 2.3f
 Name:		texlive-tocloft
 Version:	2.3f
-Release:	1
+Release:	2
 Summary:	Control table of contents, figures, etc
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tocloft
