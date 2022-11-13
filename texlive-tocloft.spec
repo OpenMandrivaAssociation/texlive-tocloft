@@ -1,19 +1,13 @@
-# revision 30209
-# category Package
-# catalog-ctan /macros/latex/contrib/tocloft
-# catalog-date 2013-05-02 18:21:19 +0200
-# catalog-license lppl1.3
-# catalog-version 2.3f
 Name:		texlive-tocloft
-Version:	2.3i
-Release:	2
+Version:	53364
+Release:	1
 Summary:	Control table of contents, figures, etc
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tocloft
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tocloft.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tocloft.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tocloft.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tocloft.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tocloft.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tocloft.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ List of Figures and List of Tables, and the ability to create
 new `List of ...'. The ToC \parskip can be changed.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -43,7 +37,8 @@ new `List of ...'. The ToC \parskip can be changed.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
