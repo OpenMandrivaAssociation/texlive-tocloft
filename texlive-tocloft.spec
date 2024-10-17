@@ -3,7 +3,7 @@ Version:	53364
 Release:	2
 Summary:	Control table of contents, figures, etc
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tocloft
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/tocloft
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tocloft.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tocloft.doc.r%{version}.tar.xz
