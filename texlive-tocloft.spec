@@ -1,6 +1,6 @@
 Name:		texlive-tocloft
-Version:	53364
-Release:	2
+Version:	75878
+Release:	1
 Summary:	Control table of contents, figures, etc
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/tocloft
