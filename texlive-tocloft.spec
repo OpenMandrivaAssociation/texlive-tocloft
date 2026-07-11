@@ -1,47 +1,23 @@
-Name:		texlive-tocloft
-Version:	75878
-Release:	1
-Summary:	Control table of contents, figures, etc
+%global tl_name tocloft
+%global tl_revision 79461
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	2.3j
+Release:	%{tl_revision}.1
+Summary:	Control table of contents, figures, etc.
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/tocloft
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tocloft.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tocloft.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tocloft.source.r%{version}.tar.xz
+License:	lppl1.3c
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tocloft.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tocloft.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tocloft.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-Provides control over the typography of the Table of Contents,
-List of Figures and List of Tables, and the ability to create
-new `List of ...'. The ToC \parskip can be changed.
+Provides control over the typography of the Table of Contents, List of
+Figures and List of Tables, and the ability to create new 'List of ...'.
+The ToC \parskip may be changed.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/tocloft/tocloft.sty
-%doc %{_texmfdistdir}/doc/latex/tocloft/README
-%doc %{_texmfdistdir}/doc/latex/tocloft/tocloft.pdf
-#- source
-%doc %{_texmfdistdir}/source/latex/tocloft/tocloft.dtx
-%doc %{_texmfdistdir}/source/latex/tocloft/tocloft.ins
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
